@@ -5,9 +5,9 @@ plugins {
 
 android {
 	namespace = "com.example.multicast"
-	compileSdk = 33
+    compileSdk = 34
 
-	defaultConfig {
+    defaultConfig {
 		applicationId = "com.example.multicast"
 		minSdk = 24
 		targetSdk = 33
