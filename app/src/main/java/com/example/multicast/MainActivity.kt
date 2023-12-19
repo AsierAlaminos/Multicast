@@ -2,6 +2,7 @@ package com.example.multicast
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.net.DatagramPacket
@@ -19,9 +20,11 @@ class MainActivity : AppCompatActivity() {
 
 		val buttonSendMulticast: Button = findViewById(R.id.buttonSendMulticast)
 		val textViewReceivedMessage: TextView = findViewById(R.id.textViewReceivedMessage)
+		val editTextMensaje: EditText = findViewById(R.id.mensaje_perso)
 
 		buttonSendMulticast.setOnClickListener {
-			sendMessage("¡Hola a todos!")
+			val mensaje = editTextMensaje.text.toString()
+			sendMessage(mensaje)
 		}
 
 		receiveThread = Thread {
